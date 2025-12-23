@@ -1,4 +1,56 @@
 :root {
-    --bg-color: #0d1117
-    box-sizing: border-box 
+    /* MARK: LCH VARIABLES */
+
+    /**
+    If any of the following pairs of conditions are met:
+    0.747 <= L <= 0.751, C <= 0.127
+    L <= 0.957, C = 0.02
+    L <= 0.2, C <= 0.034
+    L <= 0.3, C <= 0.051
+    L <= 0.5, C <= 0.085
+    ==> Any H exists in P3 space.
+    */
+
+    --L-xhi: 0.957; /* C = 0.02 => Max L =  0.957 such that H is in P3 space.*/
+    --L-hi: calc(var(var(--L-xhi)) / 1.618);
+    --L-med: calc(var(var(--L-hi)) / 1.618);
+    --L-lo: calc(var(var(--L-med)) / 1.618);
+    --L-xlo: calc(var(var(--L-lo)) / 1.618);
+    --C-lo: 0.02; /* Off-white colors, but not gray */
+    --C-hi: 0.144; /* L = L-hi => Max C = 0.144 such that the orange hue exists in P3 space */
+    --H-orange: 56deg; /* Mac > Settings > Apperance > These hues are the accent color options. */
+    --H-blue: 261deg;
+    --H-red: 28deg;
+    --H-green: 141deg;
+
+
+
+    /* MARK: DARK MODE COLOR VARIABLES */
+
+    --bg-dark-color: oklch(0.2 0 0);
+    --bg-color: oklch(0.3 0 0);
+    --bg-light-color: ;
+    --text-color: oklch(0.957 0.02 85);
+    --accent-color: oklch(0.3 0.051 308);
+    --fail-color: ;
+    --success-color: ;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: var(--bg-dark-color);
+    color: var(--text-color);
+}
+
+p {
+    background-color: var(--bg-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: inherit;
+}
+
