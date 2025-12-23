@@ -1,3 +1,6 @@
+/* These style apply to every webpage, so it specifies the overall design. */
+/* Any other CSS file specifies styles for a particular subpage. */
+
 :root {
     /* MARK: LCH VARIABLES */
 
@@ -8,17 +11,17 @@
     ==> Any H exists in P3 space.
     */
 
-    --L-xhi: 0.957; /* C = C-lo => Max L =  0.957 such that H is in P3 space.*/
-    --L-hi: calc(var(--L-xhi) / 1.618);
-    --L-med: calc(var(--L-hi) / 1.618);
-    --L-lo: calc(var(--L-med) / 1.618);
-    --L-xlo: calc(var(--L-lo) / 1.618);
-    --C-hi: 0.144; /* L = L-hi => Max C = 0.144 such that the all of the below hues exist in P3 space */
-    --C-lo: 0.02; /* Off-white colors, but not gray */
+    --L-xhi: 0.957; /* C = C-lo => Max L = 0.957 such that H is in P3 space.*/
+    --L-hi:  calc(var(--L-xhi) / 1.618);
+    --L-med: calc(var(--L-hi)  / 1.618);
+    --L-lo:  calc(var(--L-med) / 1.618);
+    --L-xlo: calc(var(--L-lo)  / 1.618);
+    --C-hi:  0.144; /* L = L-hi => Max C = 0.144 such that the all of the below hues exist in P3 space */
+    --C-lo:  0.02; /* Off-white colors, but not gray */
     /* Mac > Settings > Apperance > These hues are the accent color options. */
     --H-orange: 56deg; /* accent */
-    --H-blue: 261deg; /* primary */
-    --H-red: 28deg; /* fail */
+    --H-blue:  261deg; /* primary */
+    --H-red:    28deg; /* fail */
     --H-green: 141deg; /* success */
 
 
