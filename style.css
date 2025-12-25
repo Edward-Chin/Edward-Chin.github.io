@@ -1,4 +1,5 @@
-/* These style apply to every webpage, so it specifies the overall design. */
+/* These styles applies to every webpage, so it specifies the overall design. */
+/* This stylesheet is the only one that applies to the homepage, index.html.
 /* Any other CSS file specifies styles for a particular subpage. */
 
 :root {
@@ -15,7 +16,7 @@
     --L-hi:  calc(var(--L-xhi) / 1.618);
     --L-med: calc(var(--L-hi)  / 1.618);
     --L-lo:  calc(var(--L-med) / 1.618);
-    --L-xlo: calc(var(--L-lo)  / 1.618);
+    --L-xlo: calc(var(--L-lo)  / 1.618); /* 0.140 */
     --C-hi:  0.144; /* L = L-hi => Max C = 0.144 such that the all of the below hues exist in P3 space */
     --C-lo:  0.02; /* Off-white colors, but not gray */
     /* Mac > Settings > Apperance > These hues are the accent color options. */
@@ -28,7 +29,6 @@
 
     /* MARK: DARK MODE COLOR VARIABLES */
     /* All colors use a short list of L, C, and H values. */
-
     --bg-dark-color:  oklch(var(--L-xlo) var(--C-lo) var(--H-blue));
     --bg-color:       oklch(var(--L-lo)  var(--C-lo) var(--H-blue));
     --bg-light-color: oklch(var(--L-med) var(--C-lo) var(--H-blue));
@@ -38,7 +38,13 @@
 
 
 
-/* MARK: DEFAULT ATTRIBUTES FOR ALL ELEMENTS */
+/* MARK: LIGHT MODE VARIABLES */
+:root.light-mode {
+    
+}
+
+
+/* MARK: DEFAULT STYLES FOR ALL ELEMENTS */
 
 body {
     margin: 0;
